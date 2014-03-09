@@ -14,10 +14,7 @@ public class SplashActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+		
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
@@ -25,7 +22,10 @@ public class SplashActivity extends ActionBarActivity {
 				startActivity(intent);
 			}
 		}, SPLASH_RUNNING_TIME);
-		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
