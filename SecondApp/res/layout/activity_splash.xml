@@ -5,4 +5,12 @@
     tools:context="mdev.master_j.secondapp.SplashActivity"
     tools:ignore="MergeRootFrame">
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/mouse"
+        tools:ignore="ContentDescription" />
+    
 </FrameLayout>
