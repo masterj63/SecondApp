@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class SplashActivity extends ActionBarActivity {
+	static final int SPLASH_RUNNING_TIME = 2000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class SplashActivity extends ActionBarActivity {
 				Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
 				startActivity(intent);
 			}
-		}, 2000);
+		}, SPLASH_RUNNING_TIME);
 		
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
