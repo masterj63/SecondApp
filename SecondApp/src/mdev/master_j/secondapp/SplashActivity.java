@@ -20,8 +20,8 @@ public class SplashActivity extends ActionBarActivity {
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				Intent i = new Intent(SplashActivity.this, HomeActivity.class);
-				startActivity(i);
+				Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+				startActivity(intent);
 			}
 		}, 2000);
 		

@@ -15,12 +15,12 @@ public class HomeActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 
-		LinearLayout lL = (LinearLayout) findViewById(R.id.scrollLayout);
+		LinearLayout layout = (LinearLayout) findViewById(R.id.scrollLayout);
 		for(int i = 0; i<20; i++){
 			Button b = new Button(this);
 			b.setText("button #" + i);
 			b.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-			lL.addView(b);
+			layout.addView(b);
 		}
 	}
 
