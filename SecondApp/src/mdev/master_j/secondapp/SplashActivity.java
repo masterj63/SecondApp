@@ -1,6 +1,9 @@
 package mdev.master_j.secondapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +18,14 @@ public class SplashActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				Intent i = new Intent(SplashActivity.this, HomeActivity.class);
+				startActivity(i);
+			}
+		}, 2000);
+		
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
