@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 public class HomeActivity extends ActionBarActivity {
 
@@ -11,6 +14,14 @@ public class HomeActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
+
+		LinearLayout lL = (LinearLayout) findViewById(R.id.scrollLayout);
+		for(int i = 0; i<20; i++){
+			Button b = new Button(this);
+			b.setText("button #" + i);
+			b.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+			lL.addView(b);
+		}
 	}
 
 	@Override
