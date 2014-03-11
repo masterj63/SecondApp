@@ -2,24 +2,22 @@ package mdev.master_j.secondapp;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class HomeActivity extends ActionBarActivity {
-	static final int NUMBER_OF_ELEMENTS = 20;
+	static final int NUMBER_OF_ELEMENTS = 60;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 
-		LinearLayout layout = (LinearLayout) findViewById(R.id.scrollLayout);
-		for(int i = 0; i<NUMBER_OF_ELEMENTS; i++){
-			Button b = new Button(this);
-			b.setText("button #" + i);
-			b.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-			layout.addView(b);
-		}
+		String[] listStrings = new String[NUMBER_OF_ELEMENTS];
+		for(int i = 0; i<NUMBER_OF_ELEMENTS; i++)
+			listStrings[i] = "item #" + i;
+		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.list_item_text, listStrings);
+		ListView listView = (ListView) findViewById(R.id.listView);
+		listView.setAdapter(adapter);
 	}
 }
