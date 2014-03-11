@@ -13,11 +13,11 @@
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme_title" parent="AppBaseTheme">
+    <style name="AppTheme_withBar" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     
-    <style name="AppTheme_notitle" parent="AppBaseTheme">
+    <style name="AppTheme_withoutBar" parent="AppBaseTheme">
         <item name="android:windowNoTitle">true</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
