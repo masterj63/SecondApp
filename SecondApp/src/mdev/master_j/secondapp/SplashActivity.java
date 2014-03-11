@@ -7,18 +7,22 @@ import android.support.v7.app.ActionBarActivity;
 
 public class SplashActivity extends ActionBarActivity {
 	static final int SPLASH_RUNNING_TIME = 2000;
+	private Handler handler;
+	private Runnable homeActivityInvoker;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		
-		new Handler().postDelayed(new Runnable() {
+		handler = new Handler();
+		homeActivityInvoker = new Runnable() {
 			@Override
 			public void run() {
 				Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
 				startActivity(intent);
 			}
-		}, SPLASH_RUNNING_TIME);
+		};
+		handler.postDelayed(homeActivityInvoker, SPLASH_RUNNING_TIME);
 	}
 }
