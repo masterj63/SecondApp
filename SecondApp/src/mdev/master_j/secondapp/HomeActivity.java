@@ -1,11 +1,11 @@
 package mdev.master_j.secondapp;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends Activity {
 	static final int NUMBER_OF_ELEMENTS = 60;
 
 	@Override

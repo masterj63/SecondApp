@@ -1,11 +1,11 @@
 package mdev.master_j.secondapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
 
-public class SplashActivity extends ActionBarActivity {
+public class SplashActivity extends Activity {
 	static final int SPLASH_RUNNING_TIME = 2000;
 	private Handler handler;
 	private Runnable homeActivityInvoker;
