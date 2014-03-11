@@ -25,4 +25,10 @@ public class SplashActivity extends ActionBarActivity {
 		};
 		handler.postDelayed(homeActivityInvoker, SPLASH_RUNNING_TIME);
 	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		handler.removeCallbacks(homeActivityInvoker);
+	}
 }
