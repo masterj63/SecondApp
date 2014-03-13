@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class SplashActivity extends Activity {
-	static final int SPLASH_RUNNING_TIME = 2000;
+	private static final int SPLASH_RUNNING_TIME = 2000;
 	private Handler handler;
 	private Runnable homeActivityInvoker;
 

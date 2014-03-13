@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class HomeActivity extends Activity {
-	static final int NUMBER_OF_ELEMENTS = 60;
+	private static final int NUMBER_OF_ELEMENTS = 60;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
