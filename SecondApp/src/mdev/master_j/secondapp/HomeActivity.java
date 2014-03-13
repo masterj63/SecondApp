@@ -16,7 +16,7 @@ public class HomeActivity extends Activity {
 		String[] listStrings = new String[NUMBER_OF_ELEMENTS];
 		for(int i = 0; i<NUMBER_OF_ELEMENTS; i++)
 			listStrings[i] = "item #" + i;
-		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.list_item_text, listStrings);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.list_item_text, listStrings);
 		ListView listView = (ListView) findViewById(R.id.listView);
 		listView.setAdapter(adapter);
 	}
