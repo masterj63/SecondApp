@@ -13,9 +13,10 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 
+		String prefix = getString(R.string.list_item_prefix);
 		String[] listStrings = new String[NUMBER_OF_ELEMENTS];
 		for(int i = 0; i<NUMBER_OF_ELEMENTS; i++)
-			listStrings[i] = "item #" + i;
+			listStrings[i] = prefix + i;
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.list_item_text, listStrings);
 		ListView listView = (ListView) findViewById(R.id.listView);
 		listView.setAdapter(adapter);
